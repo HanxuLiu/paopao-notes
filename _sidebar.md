@@ -1,10 +1,10 @@
 ﻿<!-- _sidebar.md -->
 
 * 《GDB笔记》
-  * [安装gdb](/GDB笔记/安装gdb.md)
-  * [运行gdb](/GDB笔记/运行gdb.md)
-  * [开始常规调试](/GDB笔记/开始常规调试.md)
-  * [查看源码和符号表](/GDB笔记/查看源码和符号表.md)
+  * [安装gdb](/GDB笔记/01_安装gdb.md)
+  * [运行gdb](/GDB笔记/02_运行gdb.md)
+  * [开始常规调试](/GDB笔记/03_开始常规调试.md)
+  * [查看源码和符号表](/GDB笔记/04_查看源码和符号表.md)
   * [断点breakpoint](/GDB笔记/断点breakpoint.md)
   * [观察点watchpoint](/GDB笔记/观察点watchpoint.md)
   * [捕捉点catchpoint](/GDB笔记/捕捉点catchpoint.md)

@@ -1,3 +1,10 @@
+## 仓库安装
+
+```
+sudo apt install gdb
+或
+sudo yum install gdb
+```
 
 ## 源码安装
 
@@ -21,28 +28,27 @@ make install
 export PATH={你想要安装的路径}/install/bin:$PATH
 ```
 
-### 5. Q & A
+### 5. 编译报错解决方法
 
-Q: makeinfo is missing on your system
+#### 报错 makeinfo is missing on your system
+安装texinfo: `sudo apt install texinfo`
 
-A: sudo apt install texinfo
+#### 报错expat is missing or unusable
+安装expat库：`sudo apt install expat libexpat1-dev`
 
+#### 报错python is missing or unusable
+安装python库文件：`sudo apt install python2.7-dev`
 
-## 仓库安装
+#### 安装的gdb启动后没有TUI图形界面
+在编译gdb前，需要先安装curses图形库：`sudo apt install libncurses5-dev libncursesw5-dev`
 
-### 1. apt 源安装
-```
-sudo apt install gdb
-```
-### 2. yum 源安装
-```
-sudo yum install gdb
-```
+#### 安装的gdb查看源代码没有语法高亮
+在编译gdb前，需要先安装boost库，语法高亮依赖到boost正则匹配库，安装命令：`sudo apt install libboost-all-dev`
 
+#### 安装的gdb启动报错error while loading shared libraries:libbabeltrace.so.1
+需要额外安装babeltrace库：`sudo apt install libbabeltrace-dev`
 
-## 显示gdb信息
-
-### 1. 显示gdb版本信息`(show version)`
+## 打印gdb版本`(show version)`
 ```
 (gdb) show version
 GNU gdb (Ubuntu 9.2-0ubuntu1~20.04.1) 9.2
@@ -63,7 +69,7 @@ Type "apropos word" to search for commands related to "word".
 (gdb)
 ```
 
-### 2. 显示gdb配置信息`(show configuration)`
+## 打印gdb配置`(show configuration)`
 使用命令`show configuration`，或者在shell窗口使用命令`gdb --configuration`避免gdb启动。
 
 ```
