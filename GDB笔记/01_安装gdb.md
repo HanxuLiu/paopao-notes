@@ -8,23 +8,26 @@ sudo yum install gdb
 
 # 源码安装
 
-## 1. 下载、解压
+1. 下载、解压
 ```
 wget http://ftp.gnu.org/gnu/gdb/gdb-11.2.tar.gz
 tar -xvf gdb-11.2.tar.gz
 ```
-## 2. 编译并安装
+
+2. 编译并安装
 ```
 mkdir build && cd build
 ../configure --prefix={你想要安装的路径}/install
 make -j16
 make install
 ```
-## 3. 添加 bin 路径到 PATH
+
+3. 添加 bin 路径到 PATH
 ```
 export PATH={你想要安装的路径}/install/bin:$PATH
 ```
-## 4. 编译报错解决方法
+
+4. 编译报错解决方法
 
 - 报错 makeinfo is missing on your system
 安装texinfo: `sudo apt install texinfo`
