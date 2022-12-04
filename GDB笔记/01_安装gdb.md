@@ -1,4 +1,4 @@
-# 仓库安装
+## 仓库安装
 
 ```
 sudo apt install gdb
@@ -6,7 +6,7 @@ sudo apt install gdb
 sudo yum install gdb
 ```
 
-# 源码安装
+## 源码安装
 
 1. 下载、解压
 ```
@@ -47,7 +47,7 @@ export PATH={你想要安装的路径}/install/bin:$PATH
 - 安装的gdb启动报错error while loading shared libraries:libbabeltrace.so.1
 需要额外安装babeltrace库：`sudo apt install libbabeltrace-dev`
 
-# 打印gdb版本`(show version)`
+## 打印gdb版本`(show version)`
 ```
 lhx@ubuntu:~/test_notes$ gdb -v
 GNU gdb (GDB) 9.1
@@ -77,7 +77,7 @@ Type "apropos word" to search for commands related to "word".
 (gdb)
 ```
 
-# 打印gdb配置`(show configuration)`
+## 打印gdb配置`(show configuration)`
 使用命令`show configuration`，或者在shell窗口使用命令`gdb --configuration`避免gdb启动。
 
 ```
