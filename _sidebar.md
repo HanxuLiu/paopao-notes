@@ -9,6 +9,7 @@
   * [断点breakpoint](/GDB笔记/06_断点breakpoint.md)
   * [观察点watchpoint](/GDB笔记/07_观察点watchpoint.md)
   * [捕捉点catchpoint](/GDB笔记/08_捕捉点catchpoint.md)
+  * [检查点checkpoint](/GDB笔记/09_检查点checkpoint.md)
   * [查看堆栈](/GDB笔记/09_查看堆栈.md)
   * [查看反汇编](/GDB笔记/10_查看反汇编.md)
   * [查看寄存器和内存](/GDB笔记/查看寄存器和内存.md)

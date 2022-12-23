@@ -182,3 +182,7 @@ b = 0
 c = 123
 ptr = 0x7fffffffe280
 ```
+
+## 调试截图演示
+
+![image-20221223221138102](https://cdn.jsdelivr.net/gh/HanxuLiu/CDN1/img/2022/202212232211630.png)
