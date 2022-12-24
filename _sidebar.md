@@ -15,6 +15,7 @@
   * [查看寄存器和内存](/GDB笔记/查看寄存器和内存.md)
   * [调试多进程](/GDB笔记/调试多进程.md)
   * [调试多线程](/GDB笔记/调试多线程.md)
+  * [调试core文件](/GDB笔记/调试core文件.md)
   * [反向调试](/GDB笔记/反向调试.md)
   * [gdbserver远程调试](/GDB笔记/gdbserver远程调试.md)
   * [TUI图形调试](/GDB笔记/TUI图形调试.md)
