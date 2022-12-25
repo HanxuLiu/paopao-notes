@@ -1,3 +1,10 @@
+## 插件汇总
+|插件|介绍|
+|---|---|
+|GEF|扩充GDB功能的python脚本|
+|Pwndbg|强大的GDB功能扩展插件，工具众多|
+|gdb-dashboard|增强gdb功能界面|
+|gdbgui|gdb浏览器前端调试界面|
 ## 插件1：GEF
 ### GEF介绍
 GEF (GDB Enhanced Features) - a modern experience for GDB with advanced debugging capabilities for exploit devs & reverse engineers on Linux.
@@ -25,16 +32,18 @@ source /home/lhx/gdb-plugins/gef/gef.py
 ### 效果图
 
 GEF启动后窗口：
+
 ![image-20221224143308348](https://cdn.jsdelivr.net/gh/HanxuLiu/CDN1/img/2022/202212241433459.png)
 
 寄存器、汇编、源码等窗口组合显示：
+
 ![image-20221224143339756](https://cdn.jsdelivr.net/gh/HanxuLiu/CDN1/img/2022/202212241433859.png)
 
 查看16进制反汇编视图：
 
 ![image-20221224144451910](https://cdn.jsdelivr.net/gh/HanxuLiu/CDN1/img/2022/202212241444977.png)
 
- 对地址或寄存器进行取消引用：
+对地址或寄存器进行取消引用：
 
 ![image-20221224144554675](https://cdn.jsdelivr.net/gh/HanxuLiu/CDN1/img/2022/202212241445754.png)
 
