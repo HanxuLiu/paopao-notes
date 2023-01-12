@@ -62,7 +62,7 @@ core._home_lhx_paopao-notes_code_test_coredump.1000.e6e4eff9-9fce-47b6-a2b2-5d33
 lhx@ubuntu:~/paopao-notes/code$
 ```
 
-也可以修改core_pattern配置，通过命令`sudo bash -c 'echo core.%e.%p`让core文件生成到当前目录。
+也可以修改core_pattern配置，通过命令`sudo bash -c 'echo core.%e.%p > /proc/sys/kernel/core_pattern'`让core文件生成到当前目录。
 
 ```
 lhx@ubuntu:~/paopao-notes/code$ cat /proc/sys/kernel/core_pattern
