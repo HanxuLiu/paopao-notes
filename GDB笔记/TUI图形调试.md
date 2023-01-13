@@ -12,9 +12,9 @@
 |layout next/prev|显示下个/上个窗口|
 |tui new-layout name window weight|创建新的TUI窗口布局|
 |Ctrl + L|刷新窗口|
-|Ctrl + x，再按1|：单窗口模式|
-|Ctrl + x，再按2|：双窗口模式|
-|info win|显示当前所有窗口的大小
+|Ctrl + x，再按1|单窗口模式|
+|Ctrl + x，再按2|双窗口模式|
+|info win|显示当前所有窗口的大小|
 |winheight src/asm/cmd +/-N|源代码/汇编/命令行窗口高度增加/减小N行|
 |方向键、page up/down|翻阅当前窗口显示内容|
 |ctrl + p/n|浏览上条/下条命令（previous/next）|
