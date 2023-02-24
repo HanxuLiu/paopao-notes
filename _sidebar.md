@@ -20,6 +20,7 @@
   * [gdbserver远程调试](/GDB笔记/17_gdbserver远程调试.md)
   * [TUI图形调试](/GDB笔记/18_TUI图形调试.md)
   * [gdb插件](/GDB笔记/19_gdb插件.md)
+  * [日志输出](/GDB笔记/20_日志输出.md)
 
 * 《LLDB笔记》
   * [安装lldb](/LLDB笔记/安装lldb.md)
