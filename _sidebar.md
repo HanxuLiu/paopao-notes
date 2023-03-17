@@ -37,14 +37,8 @@
   * [GUI图形调试](/LLDB笔记/GUI图形调试.md)
   * [配置.lldbinit](/LLDB笔记/配置.lldbinit.md)
 
-* 《Linux笔记》
-  * [Linux常用命令](/Linux笔记/Linux常用命令.md)
-
 * 《Git笔记》
   * [十分钟搞懂Git](/Git笔记/十分钟搞懂Git.md)
 
 * 《Vim笔记》
   * [可视模式下多行操作技巧](/Vim笔记/01_可视模式下多行操作技巧.md)
-
-* 其他
-  * [Emoji表情一览表](/其他/Emoji表情一览表.md)
