@@ -39,6 +39,7 @@
 
 * 《Git笔记》
   * [十分钟搞懂Git](/Git笔记/十分钟搞懂Git.md)
+  * [git-tips](/Git笔记/git_tips.md)
 
 * 《Vim笔记》
   * [可视模式下多行操作技巧](/Vim笔记/01_可视模式下多行操作技巧.md)
