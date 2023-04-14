@@ -1,11 +1,11 @@
-
-<!-- _coverpage.md -->
-
+﻿<!-- _coverpage.md -->
 
 # **PaoPao's Notes**
 
-> 💪使用Typora+Docsify搭建一套学习知识库！
+> 故不积跬步，无以至千里；
 
-> :smile:笔记完善中……
+> 不积小流，无以成江海。
+
+> 💪💪
 
 [**开启阅读**](README.md)
