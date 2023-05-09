@@ -13,9 +13,13 @@ set autoindent
 ```
 
 > tabstop，缩写为ts，表示TAB宽度，改为4个空格，默认为8。
+>
 > softtabstop表示在编辑模式下按退格键退回缩进的长度，一般搭配 expandtab 使用。
+>
 > shiftwidth 表示每一级缩进的长度。
+>
 > expandtab表示缩进用空格来表示，noexpandtab表示缩进用Tab。
+>
 > autoindent表示自动缩进
 
 ## 空格和Tab互换

@@ -38,6 +38,7 @@
   * [配置.lldbinit](/玩转LLDB/配置.lldbinit.md)
 
 * 《玩转Git》
+  * [git用户配置](/玩转Git/01_git用户配置.md)
   * [十分钟搞懂Git](/玩转Git/十分钟搞懂Git.md)
   * [git-tips](/玩转Git/git_tips.md)
 
