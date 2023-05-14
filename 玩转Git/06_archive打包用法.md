@@ -22,13 +22,14 @@ zip
 ## 指定打包格式和名称
 
 标准命令：
+
 ```
 git archive <分支/标签/commit> --prefix=<前缀> --format=<格式> -o <名称>
 ```
 
-用`--prefix`指定打包前缀，这样解压后就会全部解压到该前缀文件夹里，建议加上。
-用`--format` 指定打包格式，若省略该参数，则会从文件名中推断格式，建议省略。
-用`-o, --output` 指定打包文件名，也就是压缩包名称。
+> `--prefix`指定打包前缀，这样解压后就会全部到该前缀文件夹里，建议加上。
+> `--format` 指定打包格式，若省略该参数则会从文件名中推断格式，建议省略。
+> `-o, --output` 指定打包文件名，也就是压缩包名称。
 
 例如：
 ```
@@ -44,6 +45,7 @@ git archive v1.0 --prefix=mycode-v1.0 | gzip > mycode-v1.0.tar.gz
 ```
 
 导出并压缩为 tar.bz2 格式：
+
 ```
 git archive v1.0 --prefix=mycode-v1.0 | bzip2 > mycode-v1.0.tar.bz2
 ```
