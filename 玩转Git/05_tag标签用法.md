@@ -72,7 +72,7 @@ git push origin :refs/tags/v1.0
 
 ## 检出tag
 
-因为 tag 本身指向的就是一个 commit，所以和根据 commit_id 检出分支是一个道理。
+tag 本身指向的就是某个 commit，所以和根据 commit_id 检出分支操作类似。
 
 ```
 git checkout <tagName>

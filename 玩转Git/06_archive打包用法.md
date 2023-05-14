@@ -2,19 +2,15 @@
 
 archive是归档的意思，用于将git仓库中的文件打包导出来，生成一份干净的代码（没有.git仓库信息）。
 
-## 打包
-
-```
-git archive master --prefix=‘project/’ | gzip > master.tar.gz
-```
-
 ## 查看支持格式
 
 ```
 git archive -l
 git archive --list
 ```
-支持的归档格式有tar、tgz、tar.gz、zip：
+
+如下可以看到，支持的归档格式有tar、tgz、tar.gz、zip。
+
 ```
 lhx@ubuntu:~$ git archive -l
 tar
@@ -23,11 +19,32 @@ tar.gz
 zip
 ```
 
-## 打包不同的分支或commit
-果想打包不同分支，只要使用不同分支名即可。比如我有一个分支名为“testbr”，可以用如下命令将其打包。
+## 指定打包格式和名称
 
-git archive --format tar.gz --output "./output.tar.gz" testbr
-如果要打包某个commit，只要先使用git log找到相应的commit id, 再使用该commit id打包即可。比如：
+标准命令：
+```
+git archive <分支/标签/commit> --prefix=<前缀> --format=<格式> -o <名称>
+```
 
-git archive --format tar.gz --output "./output.tar.gz" 5ca16ac0d603603
+用`--prefix`指定打包前缀，这样解压后就会全部解压到该前缀文件夹里，建议加上。
+用`--format` 指定打包格式，若省略该参数，则会从文件名中推断格式，建议省略。
+用`-o, --output` 指定打包文件名，也就是压缩包名称。
+
+例如：
+```
+git archive master --prefix=mycode -o ../mycode.zip
+```
+
+## 打包成tar.gz和tar.bz2格式
+
+导出并压缩为 tar.gz 格式：
+
+```
+git archive v1.0 --prefix=mycode-v1.0 | gzip > mycode-v1.0.tar.gz
+```
+
+导出并压缩为 tar.bz2 格式：
+```
+git archive v1.0 --prefix=mycode-v1.0 | bzip2 > mycode-v1.0.tar.bz2
+```
 
