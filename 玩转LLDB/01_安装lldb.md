@@ -1,6 +1,8 @@
 
 ## 源码安装
 
+这里只介绍了`cmake`生成`Makefile`，然后使用`make && make install`进行安装的方法，此外还可以通过`ninja`来安装，编译速度比make更快一些。
+
 ### 获取源码
 
 ```shell
@@ -38,6 +40,16 @@ lldb version 17.0.0git (https://github.com/llvm/llvm-project.git revision 068e98
 lhx@ubuntu:~/llvm/install/bin$ 
 ```
 
+另外，虽然我编译的是release版，但是占用的空间还是很大，编译目录5.9G，安装目录4.1G。
+
+```
+lhx@ubuntu:~/llvm$ du -sh *
+5.9G	build
+4.0K	build.sh
+4.1G	install
+3.6G	llvm-project
+```
+
 ### 单独编译lldb
 
 还可以将lldb源码从llvm项目里剥离出来，单独进行编译安装，分为两步：
@@ -58,14 +70,36 @@ make -j8 && make install
 
 ```shell
 cmake -B build-lldb -G "Unix Makefiles" \
-        -DLLVM_DIR=/path/to/build-llvm/lib/cmake/llvm \
+        -DLLVM_DIR=/home/lhx/llvm/build-llvm/lib/cmake/llvm \
+        -DClang_DIR=/home/lhx/llvm/build-llvm/lib/cmake/clang \
         -DCMAKE_INSTALL_PREFIX=/home/lhx/llvm/install-lldb \
         llvm-project/lldb
 cd build-lldb
 make -j8 && make install
 ```
 
+安装成功后，可以看下lldb安装目录占用的空间大小：
+
+```
+lhx@ubuntu:~/llvm/install-lldb$ du -sh *
+73M	bin
+3.9M	include
+151M	lib
+lhx@ubuntu:~/llvm/install-lldb$ cd bin/
+lhx@ubuntu:~/llvm/install-lldb/bin$ ls
+lldb  lldb-argdumper  lldb-instr  lldb-mi  lldb-server  lldb-vscode
+lhx@ubuntu:~/llvm/install-lldb/bin$ ./lldb
+(lldb) version 
+lldb version 9.0.0 (https://github.com/llvm/llvm-project.git revision 0399d5a9682b3cef71c653373e38890c63c4c365)
+  clang revision 0399d5a9682b3cef71c653373e38890c63c4c365
+  llvm revision 0399d5a9682b3cef71c653373e38890c63c4c365
+(lldb) q
+lhx@ubuntu:~/llvm/install-lldb/bin$
+```
+
 ### 编译报错和解决方法
+
+#### python识别有问题
 
 编译git仓库拉下来的最新代码时没有报错，当切换到llvmorg-9.0.0的tag后，cmake配置时报错python识别有问题，报错如下：
 
@@ -84,6 +118,29 @@ Call Stack (most recent call first):
 ```shell
 sudo apt-get install python3.8 python3.8-dev python3.8-distutils python3.8-venv
 ```
+
+#### 没有指定`Clang_DIR`
+注意，只指定`LLVM_DIR`不行，还需要指定`Clang_DIR`，另外`Clang_DIR`要用绝对路径，我一开始用的相对路径还是报错，为避免错误，最好都使用绝对路径。
+
+```shell
+CMake Error at cmake/modules/LLDBStandalone.cmake:6 (find_package):
+  Could not find a package configuration file provided by "Clang" with any of
+  the following names:
+
+    ClangConfig.cmake
+    clang-config.cmake
+
+  Add the installation prefix of "Clang" to CMAKE_PREFIX_PATH or set
+  "Clang_DIR" to a directory containing one of the above files.  If "Clang"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  CMakeLists.txt:17 (include)
+
+-- Configuring incomplete, errors occurred!
+```
+
+解决方法：cmake配置时添加`-DLLVM_DIR=/home/lhx/llvm/build-llvm/lib/cmake/llvm`和`-DClang_DIR=/home/lhx/llvm/build-llvm/lib/cmake/clang`就可以了。
 
 ## 仓库安装
 

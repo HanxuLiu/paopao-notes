@@ -24,7 +24,6 @@
 
 * 《玩转LLDB》
   * [安装lldb](/玩转LLDB/01_安装lldb.md)
-<!--
   * [运行lldb](/玩转LLDB/运行lldb.md)
   * [开始常规调试](/玩转LLDB/开始常规调试.md)
   * [查看源码和符号表](/玩转LLDB/查看源码和符号表.md)
@@ -37,7 +36,6 @@
   * [查看内存](/玩转LLDB/查看内存.md)
   * [GUI图形调试](/玩转LLDB/GUI图形调试.md)
   * [配置.lldbinit](/玩转LLDB/配置.lldbinit.md)
--->
 
 * 《玩转Git》
   * [git用户配置](/玩转Git/01_git用户配置.md)
