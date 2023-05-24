@@ -1,4 +1,4 @@
-# archive打包用法
+# git archive代码打包
 
 archive是归档的意思，用于将git仓库中的文件打包导出来，生成一份干净的代码（没有.git仓库信息）。
 
