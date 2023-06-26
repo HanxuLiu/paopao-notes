@@ -1,0 +1,20 @@
+#set $i=0
+#while($i<5)
+#  print stu[$i++]
+#end
+
+define mycmd
+  set $num=5
+  set $i=0
+  while($i<$num)
+    print stu[$i]
+    set $i=$i+1
+  end
+end
+
+define mycmd2
+  set $i=0
+  while($i<5)
+    print stu[$i++]
+  end
+end
