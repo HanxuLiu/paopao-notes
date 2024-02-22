@@ -41,12 +41,12 @@ git archive master --prefix=mycode -o ../mycode.zip
 导出并压缩为 tar.gz 格式：
 
 ```
-git archive v1.0 --prefix=mycode-v1.0 | gzip > mycode-v1.0.tar.gz
+git archive v1.0 --prefix=mycode-v1.0/ | gzip > mycode-v1.0.tar.gz
 ```
 
 导出并压缩为 tar.bz2 格式：
 
 ```
-git archive v1.0 --prefix=mycode-v1.0 | bzip2 > mycode-v1.0.tar.bz2
+git archive v1.0 --prefix=mycode-v1.0/ | bzip2 > mycode-v1.0.tar.bz2
 ```
 
