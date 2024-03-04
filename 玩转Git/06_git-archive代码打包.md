@@ -24,16 +24,16 @@ zip
 标准命令：
 
 ```
-git archive <分支/标签/commit> --prefix=<前缀> --format=<格式> -o <名称>
+git archive <分支/标签/commit> --prefix=<前缀>/ --format=<格式> -o <名称>
 ```
 
-> `--prefix`指定打包前缀，这样解压后就会全部到该前缀文件夹里，建议加上。
-> `--format` 指定打包格式，若省略该参数则会从文件名中推断格式，建议省略。
+> `--prefix`指定打包前缀，这样解压后就会全部到该前缀文件夹里，记得后面加上/。  
+> `--format` 指定打包格式，若省略该参数则会从文件名中推断格式，建议省略。  
 > `-o, --output` 指定打包文件名，也就是压缩包名称。
 
 例如：
 ```
-git archive master --prefix=mycode -o ../mycode.zip
+git archive master --prefix=mycode/ -o ../mycode.zip
 ```
 
 ## 打包成tar.gz和tar.bz2格式
