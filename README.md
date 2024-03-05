@@ -5,6 +5,7 @@
 <!-- - [《玩转LLDB》](/玩转LLDB/README.md) -->
 - [《玩转Git》](/玩转Git/README.md)
 - [《玩转Vim》](/玩转Vim/README.md)
+- [《玩转Linux》](/玩转Linux/README.md)
 
 写笔记中，未完待续……
 
