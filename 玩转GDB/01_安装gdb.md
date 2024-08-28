@@ -7,6 +7,7 @@
 |gdb -v或show version|打印gdb版本|
 |gdb -config或show configuration|打印gdb配置|
 
+
 ## 仓库安装
 
 ```
