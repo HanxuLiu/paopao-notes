@@ -6,28 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <!-- switch between day and night -->
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/> -->
-  <!-- https://github.com/chawyehsu/lxgw-wenkai-webfont -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" />
-  <!-- Lite version -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.7.0/style.css" />
-  <!-- TC version -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.2.0/style.css" />
-  <!-- Screen version -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
-  <style>
-    body {
-      font-family: "LXGW WenKai", sans-serif;
-      /* Lite version */
-      font-family: "LXGW WenKai Lite", sans-serif;
-      /* TC version */
-      font-family: "LXGW WenKai TC", sans-serif;
-      /* Screen version */
-      font-family: "LXGW WenKai Screen", sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
   <!-- 定义加载时候的动作 -->
@@ -35,45 +14,39 @@
   <script>
     window.$docsify = {
 	  // 项目名称
-      // name: 'paopao-notes',
-	  // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
-      // repo: 'https://github.com/HanxuLiu',
+      name: '学习笔记',
+      // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
+      repo: '',
       // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
       loadSidebar: true,
       // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
-      loadNavbar: true,
+      // loadNavbar: true,
       // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
       coverpage: true,
       // 默认情况下会抓取文档中所有标题渲染成目录，最大支持渲染的标题层级，默认值6
       maxLevel: 3,
       // 自定义侧边栏后默认不会再生成文章目录，设置生成目录的最大层级（建议配置为2-4）
-      subMaxLevel: 3,
+      subMaxLevel: 2,
       // 小屏设备下合并导航栏到侧边栏
-	  mergeNavbar: true,
-	  // 侧边栏折叠，如果想收起的是第一层级，设置为0
-	  sidebarDisplayLevel: 0,
-	  // logo: '/_media/logo.ico',
-	  // 切换页面后是否自动跳转到页面顶部
-	  auto2top: true,
-	  // 阅读进度条Progress bar
-	  progress: {
-        position: "top",
-        color: "var(--theme-color,#42b983)",
-        height: "3px",
-	  },
+      mergeNavbar: true,
+      // 侧边栏折叠，如果想收起的是第一层级，设置为0
+      sidebarDisplayLevel: 0,
+      // logo: '/_media/logo.ico',
+      // 切换页面后是否自动跳转到页面顶部
+      auto2top: true,
       // docsify-copy-code (defaults)
       copyCode: {
         buttonText : '复制',
         errorText  : 'Error',
         successText: '复制成功'
 	  },
-	  // 分页插件
+      // 分页插件
       pagination: {
         previousText: '上一章节',
         nextText: '下一章节',
-		// Allow navigation to previous/next chapter.
+        // Allow navigation to previous/next chapter.
         crossChapter: true,
-		// Display chapter name.
+        // Display chapter name.
         crossChapterText: true,
       },
 
@@ -85,10 +58,10 @@
         '/guide',       // => /guide.md
         '/get-started', // => /get-started.md
         '/zh-cn/',      // => /zh-cn/README.md
-		'/玩转GDB/',
-		'/玩转LLDB/',
-		'/玩转Git/',
-		'/玩转Vim/',
+        '/玩转GDB/',
+        '/玩转LLDB/',
+        '/玩转Git/',
+        '/玩转Vim/',
       ],
 
       // 完整配置参数
@@ -127,10 +100,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" /> -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
-  <!-- switch between day and night -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
   <!-- add highlight for different language -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
